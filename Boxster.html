@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARentals</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+</head>
+
+<body>
+    
+    <section id="header">
+        <a href="#"><img src="/images/Screenshot 2025-03-25 190219.png" class="logo">
+        
+
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="shop.html">shop</a></li>
+                <li><a href="Search.html"><i class="fas fa-search"></i></a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="contact.html">contact</a></li>
+                <li><a href="Cart.html"><i class="fas fa-shopping-bag"></i></a><li>
+                <a href="#" id="close"><i class="fas fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="Cart.html"><i class="fas fa-shopping-bag"></i>
+            </i></a><i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="prodetails" class="section-p1" >
+        <div class="single-pro-image">
+            <img src="/images/Boxster_(1)_upscaled.jpg" width="100%" id="MainImg" alt="Porsche Boxster">
+
+            <div class="small-img-group">
+                <div class="Small-img-col">
+                    <img src="/images/Boxster_(1)_upscaled.jpg" width="100%" class="small-img" alt="Porsche Boxster">
+                </div> 
+                <div class="Small-img-col">
+                    <img src="/images/Boxster (3) resized.jpg" width="100%" class="small-img" alt="Porsche Boxster">
+                </div>
+                <div class="Small-img-col">
+                    <img src="/images/Boxster (4) resized.jpg" width="100%" class="small-img" alt="Porsche Boxster">
+                </div>
+                <div class="Small-img-col">
+                    <img src="/images/Boxster (2) resized.jpg" width="100%" class="small-img" alt="Porsche Boxster">
+                </div>
+            </div>
+        </div>
+        <div class="single-pro-details">
+            <h6>Home</h6>
+            <h2>Porsche Boxster</h2>
+            <h4>R4800 per day</h4>
+            <button class="order-btn normal"
+                data-product="Porsche Boxster"
+                data-price="4800"
+                data-image="/images/Boxster_(1)_upscaled.jpg">
+              Check Out
+            </button>
+
+            <!-- Link to open the terms -->
+            <p style="margin-top: 10px;">
+                <a href="#" id="termsLink">View Terms and Conditions</a>
+            </p>
+
+            <h4>Description</h4>
+            <span>
+                The Porsche Boxster is a mid-engine roadster built for driving enthusiasts.
+                With its sharp handling, powerful engine, and top-down freedom,
+                it offers an exhilarating experience wrapped in timeless Porsche design.
+                Ideal for weekend getaways, scenic drives, or making a bold statement on the road.
+            </span>
+        </div>
+        <!-- Terms & Conditions Modal -->
+        <div id="termsModal" class="modal">
+            <div class="modal-content">
+                <span id="closeModal" class="close">&times;</span>
+                <h2>Terms and Conditions</h2>
+                <p>By proceeding, you agree to our rental policy, which includes age restrictions, insurance terms, and responsible vehicle use.</p>
+                <!-- Add more terms here -->
+                 <p>
+                    CAPE KEYS – Car Rental Platform
+                    Effective Date: 18/05/2026
+                    Last Updated: 18/05/2025
+
+                    Welcome to [Your Website Name] ("we", "us", "our"). By using our website
+                    and booking a rental vehicle, you agree to the following Terms and Conditions.
+                    Please read them carefully before proceeding to checkout.
+                </p>
+
+                <h2>Service Overview</h2> 
+                <p>
+                    CAPE KEYS is an online platform that connects
+                    users with independent car rental suppliers located in Cape Town,
+                    South Africa. We facilitate the display of vehicle listings and the booking process.
+                    We do not own or directly operate any of the vehicles listed on the site
+                    and are not a car rental company. We are a marketing and booking intermediary only.
+                </p>
+
+                <h2>
+                    2. Vehicle Listings & Images
+                </h2>
+                <p>
+                    All vehicle listings, descriptions, specifications, and images 
+                    are provided directly by third-party suppliers.
+
+                    By using our platform, you acknowledge and agree that the vehicle shown in the listing is the vehicle you will receive from the supplier. However, slight variations in appearance (due to lighting, angle, or minor cosmetic details) may occur.
+
+                    We do not verify the content or accuracy of supplier listings. Therefore, [Your Website Name] is not responsible for any misleading, outdated, or incorrect information provided by the supplier.
+                </p>
+
+                <h2>
+                    3. Booking Confirmation & Supplier Contact
+                </h2>
+
+                <p>
+                    Once you complete your booking and payment:
+
+                    Your booking will be processed and confirmed.
+
+                    You will receive the supplier’s contact information within 48 hours of booking, via the email or phone number you provided at checkout.
+
+                    After receiving the supplier’s details, you must liaise directly with them regarding pick-up, drop-off, documents required, deposits, and all other rental arrangements.
+                </p>
+
+                <h2>
+                    4. Refund Policy
+                </h2>
+
+                <p>
+                    Due to the nature of our platform and our role as a third-party connector:
+
+                    Refunds are not offered under any circumstances.
+
+                    This includes changes of mind, dissatisfaction with supplier service, or disputes over vehicle condition or availability.
+
+                    Once a booking is confirmed, it is considered final and non-refundable.
+
+                    By checking out, you confirm that you understand and accept this no-refund policy.
+                </p>
+
+                <h2>
+                    5. Dispute Resolution
+                </h2>
+
+                <p>
+                    If you experience any problems with your rental — including but not limited to issues with the vehicle, the rental process, or the conduct of the supplier — the following applies:
+
+                    All disputes must be handled directly with the supplier.
+
+                    [Your Website Name] does not mediate or get involved in any disputes between the renter and the supplier.
+
+                    We will not be held liable for delivery issues, delays, miscommunication, deposit disputes, vehicle performance, or any contractual matters related to the rental.
+
+                    We advise you to keep a copy of your rental listing and to maintain written communication with the supplier after receiving their contact details.
+                </p>
+
+                <h2>
+                    6. User Responsibility
+                </h2>
+
+                <p>
+                    By proceeding with a booking on our platform, you confirm that:
+
+                    You are at least 18 years of age (or meet the age requirement of the individual supplier).
+
+                    You hold a valid driver’s license that meets the requirements of the supplier.
+
+                    You have reviewed all information provided and accept full responsibility for communicating with the supplier once contact details are issued.
+
+                    You accept that [Your Website Name] is not liable for the condition, availability, legality, or roadworthiness of any vehicle rented.
+                </p>
+
+                <h2>
+                    7. Limitation of Liability
+                </h2>
+
+                <p>
+                    [Your Website Name] is not responsible for:
+
+                    Any loss, injury, or damage related to your use of a supplier’s vehicle.
+
+                    Any financial loss due to disputes, cancellations, or changes made by the supplier.
+
+                    Any traffic violations, accidents, breakdowns, or legal matters arising from your rental agreement with the supplier.
+
+                    We recommend inspecting the vehicle upon receipt and understanding the supplier’s terms before using the vehicle.
+                </p>
+
+                <h2>
+                    8. Modifications to These Terms
+                </h2>
+
+                <p>
+                    We may update or change these Terms and Conditions at any time. It is your responsibility to check this page for updates. Your continued use of the website signifies acceptance of the current Terms and Conditions.
+                </p>
+
+                <h2>
+                    9. Contact Us
+                </h2>
+
+                <p>
+                    For general inquiries (not related to supplier or rental issues), please contact us at:
+                    📧 [Your Email Address]
+                    📍 Cape Town, South Africa
+                </p>
+
+                <h2>
+                    10. Fraudulent Activity & User Conduct
+                </h2>
+                
+                <p>
+                    We take fraud, misuse, and illegal activity seriously. By using our platform, you agree to the following:
+
+                    You must not use false, misleading, or stolen personal information when making a booking.
+
+                    Fraudulent payment methods, stolen identities, or false documentation will result in immediate cancellation of the booking, permanent banning from the platform, and may be reported to law enforcement.
+
+                    Any attempts to access supplier vehicles without a confirmed booking or proper authorization will be treated as criminal activity.
+
+                    We reserve the right to:
+
+                    Monitor activity on the platform to detect suspicious behavior.
+
+                    Cancel bookings, block users, or take legal action if we suspect fraudulent use or abuse of our service.
+                </p>
+
+                <h2>
+                    11. User Awareness & Obligations
+                </h2>
+
+                <p>
+                    Before using our service, you should be aware of and agree to the following:
+
+                    All communication after booking is your responsibility and must be handled directly with the supplier.
+
+                    Ensure your contact details, license, and identity information are accurate and truthful.
+
+                    Always inspect the vehicle at pickup and document any damages or concerns immediately with the supplier.
+
+                    Be aware that rental terms, deposits, and liabilities may vary per supplier, and it's your responsibility to clarify these once contact is made.
+                </p>
+
+                <p>
+                    By using our platform, you agree to act in good faith,
+                    abide by all legal requirements, and respect the rules set by the individual car rental suppliers.
+                </p>
+                <button id="removeButton" class="remove-button">Remove Terms</button>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2>Other Vehicals you might like</h2>
+        <div class="pro-container">
+            <div class="pro">
+                <a href="BMW-420i.html">
+                    <img src="/images/BMW 4 Series 420i Coupe M Sport  (3).jpeg" alt="BMW 4 Series 420i Coupe M Sport" />
+                </a>
+                <div class="des">
+                    <span>BMW 4 Series 420i Coupe M Sport</span>
+                    <h5></h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>R3000 per day</h4>
+                </div>
+            </div>
+
+            <div class="pro">
+                <a href="BMW-420d.html">
+                    <img src="/images/BMW 4 Series 420d Coupe M Sport (4).jpeg" alt="BMW 4 Series 420d Coupe M Sport" />
+                </a>
+                <div class="des">
+                    <span>BMW 4 Series 420d Coupe M Sport</span>
+                    <h5></h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>R6400 per day</h4>
+                </div>
+            </div>
+    
+            <div class="pro">
+                <a href="Porsche.html">
+                    <img src="/images/Porsche (3).png" alt="Porsche 911 Carrera GTS" />
+                </a>
+                <div class="des">
+                    <span>Porsche 911 Carrera GTS</span>
+                    <h5></h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>R4800 per day</h4>
+                </div>
+            </div>
+    
+            <div class="pro">
+                <a href="Aston.html">
+                    <img src="/images/Aston martin (1).jpeg" alt="Aston Martin" />
+                </a>
+                <div class="des">
+                    <span>Aston Martin</span>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>R6400 per day</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1" >
+    <div class="newstext">
+        <h4>Sign up for promotions</h4>
+        <p>Get E-mail updates about our latest Rentals & <span>Specials</span></p>
+    </div>
+    <div class="form">
+        <input type="text" placeholder="Your E-mail Address">
+        <button>Sign up</button>
+    </div>
+    </section>
+
+<footer class="section-p1">
+    <div class="col">
+        <img class="logo" src="/images/Logo.jpg" alt="">
+        <h4>Contact</h4>
+        <p><strong>Address: </strong> 562 Wellington Road, Street 32,San Francisco</p>
+        <p><strong>Phone: </strong> +01 2222 365 /(+91) 01 2345 6789</p>
+        <p><strong>Hours: </strong> 10:00 - 18:00,Mon - Sat</p>
+        <div class="follow">
+            <h4>Follow us</h4>
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <h4>About</h4>
+        <a href="#">About us</a>
+        <a href="#">Delivery information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Contact Us</a>
+        <!-- Link to open the terms -->
+        <p style="margin-top: 10px;">
+            <a href="#" id="termsLink">View Terms and Conditions</a>
+        </p>
+    </div>
+
+    <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+    </div>
+
+    <div class="col install">
+        <h4>Install App</h4>
+        <p>From App Store or Google Play</p>
+        <div class="row">
+            <img src="/images/Screenshot 2025-04-09 193144.png" alt="">
+        </div>
+        <p>Secured Payment Gateways</p>
+        <img src="/images/payments.png" alt="">
+    </div>
+
+    <div class="copyright">
+        <p>© 2025, Cape Town Rentals</p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('termsLink').addEventListener('click', function (event) {
+      event.preventDefault();
+      document.getElementById('termsModal').style.display = 'block';
+    });
+  
+    document.getElementById('closeModal').addEventListener('click', function () {
+      document.getElementById('termsModal').style.display = 'none';
+    });
+  
+    window.addEventListener('click', function (event) {
+      const modal = document.getElementById('termsModal');
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+</script>
+
+    <script>
+        var MainImg = document.getElementById("MainImg");
+        var smalling = document.getElementsByClassName("small-img");
+
+        smalling[0].onclick = function(){
+            MainImg.src = smalling[0].src;
+        }
+        smalling[1].onclick = function(){
+            MainImg.src = smalling[1].src;
+        }
+        smalling[2].onclick = function(){
+            MainImg.src = smalling[2].src;
+        }
+        smalling[3].onclick = function(){
+            MainImg.src = smalling[3].src;
+        }
+        smalling[4].onclick = function(){
+            MainImg.src = smalling[4].src;
+        }
+        smalling[5].onclick = function(){
+            MainImg.src = smalling[5].src;
+        }
+    </script>
+
+    <script>
+        function redirectToCart(productName, productPrice) {
+        const url = `cart.html?product=${encodeURIComponent(productName)}&price=${encodeURIComponent(productPrice)}`;
+        window.location.href = url;
+        }
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const buttons = document.querySelectorAll('.order-btn');
+  
+        buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                const product = {
+                name: button.getAttribute('data-product'),
+                price: parseFloat(button.getAttribute('data-price')),
+                image: button.getAttribute('data-image'),
+                quantity: 1
+            };
+  
+            let cart = JSON.parse(localStorage.getItem('Cart')) || [];
+            cart.push(product);
+            localStorage.setItem('cart', JSON.stringify(cart));
+  
+            window.location.href = "Cart.html"; // Be sure this matches your actual file name
+            });
+        });
+        });
+    </script>
+  
+  
+    <script src="script.js"></script>
+</body>
+</html>
