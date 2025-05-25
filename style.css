@@ -1282,8 +1282,7 @@ form-details form h2{
         width: 100%;
         padding: 20px;
     }
-}
-    /*Checkout Page*/
     #checkout {
-        
+        overflow-x: auto;
     }
+}
