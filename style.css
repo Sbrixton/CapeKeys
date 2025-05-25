@@ -1285,4 +1285,19 @@ form-details form h2{
     #checkout {
         overflow-x: auto;
     }
+    .section-p1 {
+        padding: 20px;
+    }
+
+    /* Make both pages responsive */
+    #cart, #checkout {
+        overflow-x: auto;
+    }
+
+    #cart table,
+    #checkout table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
 }
