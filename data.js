@@ -118,5 +118,5 @@ if (!localStorage.getItem('products')) {
     // Add more products as needed
     ];
 
-  localStorage.setItem('products', JSON.stringify(products));
+    localStorage.setItem('products', JSON.stringify(products));
 }
