@@ -422,7 +422,7 @@ body {
     justify-content:space-between;
     flex-wrap: wrap;
     align-items: center;
-    background-image: url(Banner\ bcg.jpg);
+    background-image: url(Banner bcg.jpg);
     background-repeat: no-repeat;
     background-position: 20% 30%;
     background-color: #041e42;
@@ -1018,7 +1018,7 @@ form-details form h2{
 }
 
 #supercar-header {
-    background: url('wallpaper.png') no-repeat center center/cover;
+    background: url('Wallpaper.png') no-repeat center center/cover;
     height: 40vh;
     width: 100%;
     display: flex;
