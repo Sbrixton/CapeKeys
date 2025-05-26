@@ -384,6 +384,25 @@
 </footer>
 
 <script>
+    const bar = document.getElementById('bar');
+    const nav = document.getElementById('navbar');
+    const close = document.getElementById('close');
+
+    if (bar) {
+        bar.addEventListener('click', () => {
+            nav.classList.add('active');
+        });
+    }
+
+    if (close) {
+        close.addEventListener('click', () => {
+            nav.classList.remove('active');
+        });
+    }
+</script>
+
+
+<script>
     function redirectToCart(productName, productPrice) {
       const url = `cart.html?product=${encodeURIComponent(productName)}&price=${encodeURIComponent(productPrice)}`;
       window.location.href = url;
