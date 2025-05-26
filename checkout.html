@@ -33,21 +33,23 @@
     
     <section id="checkout" class="section-p1">
         <h2>Your Order Summary</h2>
-        <table width="100%">
-            <thead>
-                <tr>
-                    <th>Remove</th> <!-- This is important for column alignment -->
-                    <th>Product</th>
-                    <th>Image</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                    <th>Subtotal</th>
-                </tr>
-            </thead>
-            <tbody id="cart-table-body">
-                <!-- Items will be loaded here via JavaScript -->
-            </tbody>
-        </table>
+        <div class="table-container">
+          <table width="100%">
+              <thead>
+                  <tr>
+                      <th>Remove</th> <!-- This is important for column alignment -->
+                      <th>Product</th>
+                      <th>Image</th>
+                      <th>Price</th>
+                      <th>Quantity</th>
+                      <th>Subtotal</th>
+                  </tr>
+              </thead>
+              <tbody id="cart-table-body">
+                  <!-- Items will be loaded here via JavaScript -->
+              </tbody>
+          </table>
+        </div>
     </section>
 
     <!-- Total and PayPal Button -->
