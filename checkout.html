@@ -36,6 +36,7 @@
         <table width="100%">
             <thead>
                 <tr>
+                    <th>Remove</th> <!-- This is important for column alignment -->
                     <th>Product</th>
                     <th>Image</th>
                     <th>Price</th>
@@ -102,6 +103,7 @@
 
             const row = document.createElement('tr');
             row.innerHTML = `
+                <td></td> <!-- Empty cell for Remove column -->
                 <td>${product.name}</td>
                 <td><img src="${product.image}" width="80" alt="${product.name}"></td>
                 <td>R${price.toFixed(2)}</td>
