@@ -1065,6 +1065,10 @@ form-details form h2{
     cursor: pointer;
 }
   
+.table-container {
+    overflow-x: auto;
+    width: 100%;
+}
 
 
 /* Start Media Query */
