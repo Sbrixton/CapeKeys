@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Search | CARentals</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- ✅ Same Navbar Structure -->
+  <section id="header">
+    <a href="index.html"><img src="/images/Screenshot 2025-03-25 190219.png" class="logo" alt="CARentals logo" /></a>
+    <div>
+      <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a class="active" href="Search.html"><i class="fas fa-search"></i></a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="Cart.html"><i class="fas fa-shopping-bag"></i></a></li>
+        <a href="#" id="close"><i class="fas fa-times"></i></a>
+      </ul>
+    </div>
+    <div id="mobile">
+      <a href="Cart.html"><i class="fas fa-shopping-bag"></i></a>
+      <i id="bar" class="fas fa-outdent"></i>
+    </div>
+  </section>
+
+  <!-- ✅ Search Section -->
+  <section id="search" class="section-p1">
+    <h2>Find Your Ride</h2>
+    <input type="text" id="searchInput" placeholder="Type a car name...">
+    <button id="searchBtn" class="normal">Search</button>
+
+    <div id="searchResults" class="section-p1"></div>
+  </section>
+
+  <script src="search.js"></script>
+  <script src="script.js"></script> <!-- Your mobile nav toggle -->
+</body>
+</html>
