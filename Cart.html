@@ -13,7 +13,7 @@
 <body>
     
     <section id="header">
-        <a href="#"><img src="Screenshot 2025-03-25 190219.png" class="logo">
+        <a href="#"><img src="Screenshot 2025-03-25 190219.png" class="logo" alt="Logo"></a>
 
         <div>
             <ul id="navbar">
@@ -22,8 +22,8 @@
                 <li><a href="Search.html"><i class="fas fa-search"></i></a></li>
                 <li><a  href="about.html">about</a></li>
                 <li><a href="contact.html">contact</a></li>
-                <li><a class="active" href="Cart.html"><i class="fas fa-shopping-bag"></i></a><li>
-                <a href="#" id="close"><i class="fas fa-times"></i></a>
+                <li><a class="active" href="Cart.html"><i class="fas fa-shopping-bag"></i></a></li>
+                <li><a href="#" id="close"><i class="fas fa-times"></i></a></li>
             </ul>
         </div>
         <div id="mobile">
@@ -85,6 +85,25 @@
             <button type="button" id="checkoutBtn" class="normal">Proceed to Checkout</button>
         </div>
     </section>
+
+<script>
+    const bar = document.getElementById('bar');
+    const nav = document.getElementById('navbar');
+    const close = document.getElementById('close');
+
+    if (bar) {
+        bar.addEventListener('click', () => {
+            nav.classList.add('active');
+        });
+    }
+
+    if (close) {
+        close.addEventListener('click', () => {
+            nav.classList.remove('active');
+        });
+    }
+</script>
+
     
 
 <script>
