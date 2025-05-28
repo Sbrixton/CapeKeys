@@ -1147,6 +1147,11 @@ form-details form h2{
   cursor: pointer;
 }
 
+/* Hide desktop icon on mobile */
+.desktop-only {
+  display: inline-block;
+}
+
 
 /* Start Media Query */
 
@@ -1249,7 +1254,13 @@ form-details form h2{
         width: 50%;
     }
 
-}    
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+}
 
 @media  (max-width:477px) {
      .section-p1 {
