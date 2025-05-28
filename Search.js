@@ -1,51 +1,61 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const searchIcon = document.getElementById('searchIcon');
+  const searchOverlay = document.getElementById('searchOverlay');
   const searchInput = document.getElementById('searchInput');
   const searchResults = document.getElementById('searchResults');
 
-  // Load products from localStorage
+  // Toggle overlay
+  searchIcon.addEventListener('click', () => {
+    searchOverlay.style.display = 'flex';
+    searchInput.focus();
+  });
+
+  // Close overlay on outside click or Escape
+  searchOverlay.addEventListener('click', (e) => {
+    if (e.target === searchOverlay) {
+      searchOverlay.style.display = 'none';
+      searchInput.value = '';
+      searchResults.innerHTML = '';
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      searchOverlay.style.display = 'none';
+      searchInput.value = '';
+      searchResults.innerHTML = '';
+    }
+  });
+
   const products = JSON.parse(localStorage.getItem('products')) || [];
 
-  // Function to render search results
   function renderResults(results) {
     if (results.length === 0) {
-      searchResults.innerHTML = '<p>No matching products found.</p>';
+      searchResults.innerHTML = '<p>No matching cars found.</p>';
       return;
     }
 
-    searchResults.innerHTML = results.map(product => `
-      <div class="product">
-        <img src="${product.image}" alt="${product.name}" width="150">
-        <h4>${product.name}</h4>
-        <p>R${product.price.toLocaleString()}</p>
+    searchResults.innerHTML = results.map(p => `
+      <div class="search-item">
+        <img src="${p.image}" alt="${p.name}" />
+        <div class="search-info">
+          <h4>${p.name}</h4>
+          <p>R${p.price.toLocaleString()}</p>
+          <button onclick="redirectToCart('${p.name}', ${p.price})">Checkout</button>
+        </div>
       </div>
     `).join('');
   }
 
-  // Live search as user types
   searchInput.addEventListener('input', () => {
-    const query = searchInput.value.trim().toLowerCase();
-
-    if (!query) {
-      searchResults.innerHTML = ''; // Clear if empty
-      return;
-    }
-
-    const filtered = products.filter(p =>
-      p.name.toLowerCase().includes(query)
-    );
-
-    renderResults(filtered);
-  });
-
-  // Optional: also search on button click
-  const searchBtn = document.getElementById('searchBtn');
-  searchBtn.addEventListener('click', () => {
-    const query = searchInput.value.trim().toLowerCase();
-
-    const filtered = products.filter(p =>
-      p.name.toLowerCase().includes(query)
-    );
-
+    const query = searchInput.value.toLowerCase().trim();
+    const filtered = products.filter(p => p.name.toLowerCase().includes(query));
     renderResults(filtered);
   });
 });
+
+// Reuse this from shopDisplay.js
+function redirectToCart(name, price) {
+  const url = `Cart.html?product=${encodeURIComponent(name)}&price=${encodeURIComponent(price)}`;
+  window.location.href = url;
+}
