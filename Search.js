@@ -59,3 +59,28 @@ function redirectToCart(name, price) {
   const url = `Cart.html?product=${encodeURIComponent(name)}&price=${encodeURIComponent(price)}`;
   window.location.href = url;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const desktopSearchIcon = document.getElementById('searchIcon');
+  const mobileSearchIcon = document.getElementById('mobileSearchIcon');
+  const overlay = document.getElementById('searchOverlay');
+
+  const showSearchOverlay = () => {
+    overlay.style.display = 'block';
+    document.getElementById('searchInput').focus();
+  };
+
+  if (desktopSearchIcon) {
+    desktopSearchIcon.addEventListener('click', (e) => {
+      e.preventDefault();
+      showSearchOverlay();
+    });
+  }
+
+  if (mobileSearchIcon) {
+    mobileSearchIcon.addEventListener('click', (e) => {
+      e.preventDefault();
+      showSearchOverlay();
+    });
+  }
+});
