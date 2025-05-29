@@ -1128,6 +1128,24 @@ form-details form h2{
   margin-right: 15px;
 }
 
+.search-results {
+  max-height: 400px; /* You can adjust this */
+  overflow-y: auto;
+  padding-right: 5px; /* Optional: makes room for scrollbar */
+}
+
+.search-results {
+  scroll-behavior: smooth;
+}
+
+.search-results::-webkit-scrollbar {
+  width: 8px;
+}
+.search-results::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
 .search-info {
   flex: 1;
 }
