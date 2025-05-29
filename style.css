@@ -1078,28 +1078,31 @@ form-details form h2{
   position: static; /* Let it flow naturally */
 }
 
+/* Search Overlay - Full screen, behind navbar */
 .search-overlay {
   position: fixed;
-  top: 0; 
+  top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.75);
   display: none;
   justify-content: center;
-  align-items: center; /* Center vertically */
-  z-index: 2000; /* Higher than navbar */
+  align-items: flex-start; /* Align top, but not too high */
+  padding-top: 120px; /* Push it down below the navbar */
+  z-index: 999; /* Lower than navbar */
 }
 
 
+/* Centered search box */
 .search-container {
   background: #fff;
-  padding: 25px;
+  padding: 20px;
   width: 90%;
-  max-width: 600px;
+  max-width: 700px;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin: 0 auto;
 }
 
 
