@@ -1071,13 +1071,11 @@ form-details form h2{
 }
 
 #searchIcon {
-  position: fixed;
-  top: 20px;
-  right: 80px;
-  font-size: 20px;
-  color: #333;
+  font-size: 18px;
+  color: white; /* Adjust based on your header */
   cursor: pointer;
-  z-index: 1000;
+  z-index: 1; /* No need for 1000 anymore */
+  position: static; /* Let it flow naturally */
 }
 
 .search-overlay {
