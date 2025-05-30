@@ -37,16 +37,19 @@ function renderResults(results) {
 
   searchResults.innerHTML = results.map(product => `
     <div class="search-item">
-      <a href="product.html?name=${encodeURIComponent(product.name)}">
+      <a href="${product.page}">
         <img src="${product.image}" alt="${product.name}">
-        <div class="search-info">
-          <h4>${product.name}</h4>
-          <p>R${product.price.toLocaleString()}</p>
-        </div>
       </a>
+      <div class="search-info">
+        <a href="${product.page}">
+          <h4>${product.name}</h4>
+        </a>
+        <p>R${product.price.toLocaleString()}</p>
+      </div>
     </div>
   `).join('');
 }
+
 
 
   searchInput.addEventListener('input', () => {
