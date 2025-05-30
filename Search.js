@@ -29,42 +29,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const products = JSON.parse(localStorage.getItem('products')) || [];
 
-  function renderResults(results) {
+function renderResults(results) {
   if (results.length === 0) {
     searchResults.innerHTML = '<p>No matching products found.</p>';
     return;
   }
 
   searchResults.innerHTML = results.map(product => `
-    <div class="search-item" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}">
-      <img src="${product.image}" alt="${product.name}">
-      <div class="search-info">
-        <h4>${product.name}</h4>
-        <p>R${product.price.toLocaleString()}</p>
-        <button class="add-to-cart-btn">View / Add to Cart</button>
-      </div>
+    <div class="search-item">
+      <a href="product.html?name=${encodeURIComponent(product.name)}">
+        <img src="${product.image}" alt="${product.name}">
+        <div class="search-info">
+          <h4>${product.name}</h4>
+          <p>R${product.price.toLocaleString()}</p>
+        </div>
+      </a>
     </div>
   `).join('');
-
-  // Attach click event to each button
-  document.querySelectorAll('.add-to-cart-btn').forEach(button => {
-    button.addEventListener('click', (e) => {
-      const parent = e.target.closest('.search-item');
-      const product = {
-        name: parent.dataset.name,
-        price: parseFloat(parent.dataset.price),
-        image: parent.dataset.image,
-        quantity: 1
-      };
-
-      let cart = JSON.parse(localStorage.getItem('cart')) || [];
-      cart.push(product);
-      localStorage.setItem('cart', JSON.stringify(cart));
-
-      // Redirect to cart page (optional)
-      window.location.href = 'Cart.html';
-    });
-  });
 }
 
 
