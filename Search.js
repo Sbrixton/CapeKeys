@@ -30,22 +30,43 @@ document.addEventListener('DOMContentLoaded', () => {
   const products = JSON.parse(localStorage.getItem('products')) || [];
 
   function renderResults(results) {
-    if (results.length === 0) {
-      searchResults.innerHTML = '<p>No matching cars found.</p>';
-      return;
-    }
-
-    searchResults.innerHTML = results.map(p => `
-      <div class="search-item">
-        <img src="${p.image}" alt="${p.name}" />
-        <div class="search-info">
-          <h4>${p.name}</h4>
-          <p>R${p.price.toLocaleString()}</p>
-          <button onclick="redirectToCart('${p.name}', ${p.price})">Checkout</button>
-        </div>
-      </div>
-    `).join('');
+  if (results.length === 0) {
+    searchResults.innerHTML = '<p>No matching products found.</p>';
+    return;
   }
+
+  searchResults.innerHTML = results.map(product => `
+    <div class="search-item" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}">
+      <img src="${product.image}" alt="${product.name}">
+      <div class="search-info">
+        <h4>${product.name}</h4>
+        <p>R${product.price.toLocaleString()}</p>
+        <button class="add-to-cart-btn">View / Add to Cart</button>
+      </div>
+    </div>
+  `).join('');
+
+  // Attach click event to each button
+  document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+    button.addEventListener('click', (e) => {
+      const parent = e.target.closest('.search-item');
+      const product = {
+        name: parent.dataset.name,
+        price: parseFloat(parent.dataset.price),
+        image: parent.dataset.image,
+        quantity: 1
+      };
+
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push(product);
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      // Redirect to cart page (optional)
+      window.location.href = 'Cart.html';
+    });
+  });
+}
+
 
   searchInput.addEventListener('input', () => {
     const query = searchInput.value.toLowerCase().trim();
