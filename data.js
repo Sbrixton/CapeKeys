@@ -15,19 +15,19 @@ if (!localStorage.getItem('products')) {
       {
         name: "BMW 4 Series 420i Coupe M Sport",
         price: 3000,
-        image: "BMW 4 Series 420i Coupe M Sport (3).jpeg",
+        image: "BMW 4 Series 420i Coupe M Sport  (3).jpeg",
         page: "BMW-420i.html"
       },
       {
         name: "BMW M2 Coupe",
         price: 4500,
-        image: "BMW M2 Coupe (3).jpeg",
+        image: "BMW M2 Coupe  (3).jpeg",
         page: "BMW-M2-Coupe.html"
       },
       {
         name: "BMW X1",
         price: 4500,
-        image: "BMW X1 (3).jpeg ",
+        image: "BMW X1 (6).jpeg",
         page: "BMW-X1.html"
       },
       {
@@ -57,7 +57,7 @@ if (!localStorage.getItem('products')) {
       {
         name: "Lamborghini Evo",
         price: 10000,
-        image: "Lambo (1).jpeg",
+        image: "Lamb (1).jpeg",
         page: "Lambo.html"
       },
       {
@@ -69,37 +69,37 @@ if (!localStorage.getItem('products')) {
       {
         name: "Merecedes-Benz G-Class G350d",
         price: 7000,
-        image: "Merecedes-Benz G-Class G350d (3).jpeg",
+        image: "Mercedes-Benz G-Class G350d (5).jpeg",
         page: "G.html"
       },
       {
         name: "Merecedes-Benz ML ML63",
         price: 4700,
-        image: "Merecedes-Benz ML ML63 (3).jpeg",
+        image: "Mercedes-Benz ML ML63 (4).jpeg",
         page: "Mercedes-Benz-ML63.html"
       },
       {
         name: "Merecedes V300 Maybach",
         price: 7600,
-        image: "Vclass.jpeg",
+        image: "V class.jpeg",
         page: "V-class.html"
       },
       {
         name: "Merecedes-Benz Vito Maybach",
         price: 7400,
-        image: "Merecedes-Benz Vito (2).jpeg",
+        image: "Mercedes-Benz Vito (2).jpeg",
         page: "Benz Vito.html"
       },
       {
         name: "Porsche 911 Carrera GTS",
         price: 4800,
-        image: "Porschet (3).jpeg",
+        image: "Porsche (2).png",
         page: "Porsche.html"
       },
       {
         name: "Porsche Boxster",
         price: 4800,
-        image: "Boxster_(1)_upscaled.jpeg",
+        image: "Boxster (1).jpg",
         page: "Boxster.html"
       },
       {
@@ -111,7 +111,7 @@ if (!localStorage.getItem('products')) {
       {
         name: "Rolls Royce",
         price: 7400,
-        image: "Rolls1.jpg",
+        image: "Rolls.jpg",
         page: "Rolls.html"
       },
       {
@@ -128,8 +128,8 @@ if (!localStorage.getItem('products')) {
       },
       {
         name: "Land Rover Discovery",
-        price: 10000,
-        image: "Discovery (1).jpeg",
+        price: 4700,
+        image: "Discovery (2).png",
         page: "Discovery.html"
       },
     // Add more products as needed
