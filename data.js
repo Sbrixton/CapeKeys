@@ -10,7 +10,7 @@ if (!localStorage.getItem('products')) {
         name: "BMW 4 Series 420d Coupe M Sport ",
         price: 6400,
         image: "BMW 4 Series 420d Coupe M Sport (4).jpeg",
-        page: "CapeKeys/BMW-420d.html"
+        page: "BMW-420d.html"
       },
       {
         name: "BMW 4 Series 420i Coupe M Sport",
