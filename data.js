@@ -4,7 +4,7 @@ if (!localStorage.getItem('products')) {
         name: "Aston Martin",
         price: 6400,
         image: "Aston martin (1).jpeg",
-        page: "Sbrixton/CapeKeys/Aston.html"
+        page: "Sbrixton.github.io/CapeKeys/Aston.html"
       },
       {
         name: "BMW 4 Series 420d Coupe M Sport ",
