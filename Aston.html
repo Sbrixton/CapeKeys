@@ -31,7 +31,7 @@
         </div>
         <div id="mobile">
             <a href="#" id="mobileSearchIcon"><i class="fas fa-search"></i></a>
-            <a href="cart.html"><i class="fas fa-shopping-bag"></i>
+            <a href="Cart.html"><i class="fas fa-shopping-bag"></i>
             </a><i id="bar" class="fas fa-outdent"></i>
         </div>
     </section>
@@ -399,6 +399,14 @@
     </div>
     </footer>
 
+<div id="searchOverlay" class="search-overlay">
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search for products..." />
+    <div id="searchResults" class="search-results"></div>
+  </div>
+</div>
+    
+
 <script>
     document.getElementById('termsLink').addEventListener('click', function (event) {
       event.preventDefault();
@@ -416,37 +424,6 @@
       }
     });
 </script>
-
-    <script>
-        var MainImg = document.getElementById("MainImg");
-        var smalling = document.getElementsByClassName("small-img");
-
-        smalling[0].onclick = function(){
-            MainImg.src = smalling[0].src;
-        }
-        smalling[1].onclick = function(){
-            MainImg.src = smalling[1].src;
-        }
-        smalling[2].onclick = function(){
-            MainImg.src = smalling[2].src;
-        }
-        smalling[3].onclick = function(){
-            MainImg.src = smalling[3].src;
-        }
-        smalling[4].onclick = function(){
-            MainImg.src = smalling[4].src;
-        }
-        smalling[5].onclick = function(){
-            MainImg.src = smalling[5].src;
-        }
-    </script>
-
-    <script>
-        function redirectToCart(productName, productPrice) {
-        const url = `cart.html?product=${encodeURIComponent(productName)}&price=${encodeURIComponent(productPrice)}`;
-        window.location.href = url;
-        }
-    </script>
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
