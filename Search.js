@@ -36,8 +36,8 @@ function renderResults(results) {
   }
 
   searchResults.innerHTML = results.map(product => {
-    const imgSrc = product.image.startsWith('/') ? product.image : '/CapeKeys/' + product.image;  // 🔧 Ensures image path is correct
-    const pageHref = product.page.startsWith('/') ? product.page : '/CapeKeys/' + product.page;  // 🔧 Ensures link path is correct
+    const imgSrc = product.image.startsWith('/') ? product.image : '/CapeKeys/' + product.image;
+    const pageHref = product.page.startsWith('/') ? product.page : '/CapeKeys/' + product.page;
 
     return `
       <div class="search-item">
