@@ -18,7 +18,9 @@
             <ul id="navbar">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">shop</a></li>
-                <li><a href="Search.html"><i class="fas fa-search"></i></a></li>
+                <li class="desktop-only">
+                    <a href="#" id="searchIcon"><i class="fas fa-search"></i></a>
+                </li>
                 <li><a  href="about.html">about</a></li>
                 <li><a href="contact.html">contact</a></li>
                 <li><a class="active" href="Cart.html"><i class="fas fa-shopping-bag"></i></a><li>
@@ -26,8 +28,9 @@
             </ul>
         </div>
         <div id="mobile">
+            <a href="#" id="mobileSearchIcon"><i class="fas fa-search"></i></a>
             <a href="Cart.html"><i class="fas fa-shopping-bag"></i>
-            </i></a><i id="bar" class="fas fa-outdent"></i>
+            </a><i id="bar" class="fas fa-outdent"></i>
         </div>
     </section>
     
@@ -83,6 +86,14 @@
         <h3>Total: <span id="checkout-total">R0.00</span></h3>
         <div id="paypal-button-container"></div>
     </section>
+
+  <!-- Search Overlay (Initially Hidden) -->
+<div id="searchOverlay" class="search-overlay">
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search for products..." />
+    <div id="searchResults" class="search-results"></div>
+  </div>
+</div>
 
     <script>
         // Step 1: Retrieve cart data from localStorage
@@ -189,7 +200,8 @@
 </script>
   
   
-
+<script src="data.js"></script>
+<script src="Search.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
