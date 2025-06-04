@@ -36,25 +36,25 @@ function renderResults(results) {
   }
 
   searchResults.innerHTML = results.map(product => {
-      // ✅ FIXED — Ensure paths start with /CapeKeys/
-      const imagePath = product.image.startsWith('/') ? product.image : '/CapeKeys/' + product.image;
-      const pagePath = product.page.startsWith('/') ? product.page : '/CapeKeys/' + product.page;
+    const imgSrc = product.image.startsWith('/') ? product.image : '/CapeKeys/' + product.image;  // 🔧 Ensures image path is correct
+    const pageHref = product.page.startsWith('/') ? product.page : '/CapeKeys/' + product.page;  // 🔧 Ensures link path is correct
 
-      return `
-        <div class="search-item">
-          <a href="${pagePath}">
-            <img src="${imagePath}" alt="${product.name}">
+    return `
+      <div class="search-item">
+        <a href="${pageHref}">
+          <img src="${imgSrc}" alt="${product.name}">
+        </a>
+        <div class="search-info">
+          <a href="${pageHref}">
+            <h4>${product.name}</h4>
           </a>
-          <div class="search-info">
-            <a href="${pagePath}">
-              <h4>${product.name}</h4>
-            </a>
-            <p>R${product.price.toLocaleString()}</p>
-          </div>
+          <p>R${product.price.toLocaleString()}</p>
         </div>
-      `;
-    }).join('');
-  }
+      </div>
+    `;
+  }).join('');
+}
+
 
 
 
