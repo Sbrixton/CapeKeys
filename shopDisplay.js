@@ -16,6 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Redirect function
 function redirectToCart(name, price) {
-  const url = `Cart.html?product=${encodeURIComponent(name)}&price=${encodeURIComponent(price)}`;
+  const url = `/CapeKeys/Cart.html?product=${encodeURIComponent(name)}&price=${encodeURIComponent(price)}`;
   window.location.href = url;
 }
