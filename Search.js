@@ -58,7 +58,9 @@ function renderResults(results) {
 
   searchInput.addEventListener('input', () => {
     const query = searchInput.value.toLowerCase().trim();
+    console.log("🔍 User typed:", query);  // Debug line
     const filtered = products.filter(p => p.name.toLowerCase().includes(query));
+    console.log("✅ Matching products:", filtered);  // Debug line
     renderResults(filtered);
   });
 });
