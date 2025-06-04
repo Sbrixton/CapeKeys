@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         cart.push(product);
         localStorage.setItem('cart', JSON.stringify(cart));
   
-        window.location.href = "Cart.html";
+        window.location.href = "/CapeKeys/Cart.html";
       });
     });
 });
