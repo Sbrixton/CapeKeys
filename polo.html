@@ -21,15 +21,18 @@
       <ul id="navbar">
         <li><a href="index.html">Home</a></li>
         <li><a class="active" href="shop.html">Shop</a></li>
-        <li><a href="Search.html"><i class="fas fa-search"></i></a></li>
+        <li class="desktop-only">
+          <a href="#" id="searchIcon"><i class="fas fa-search"></i></a>
+        </li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
+        <li><a href="Cart.html"><i class="fas fa-shopping-bag"></i></a></li>
         <li><a href="#" id="close"><i class="fas fa-times"></i></a></li>
       </ul>
     </div>
     <div id="mobile">
-      <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
+      <a href="#" id="mobileSearchIcon"><i class="fas fa-search"></i></a>
+      <a href="Cart.html"><i class="fas fa-shopping-bag"></i></a>
       <i id="bar" class="fas fa-outdent"></i>
     </div>
 
@@ -389,6 +392,14 @@
     </div>
   </footer>
 
+  <!-- Search Overlay (Initially Hidden) -->
+<div id="searchOverlay" class="search-overlay">
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search for products..." />
+    <div id="searchResults" class="search-results"></div>
+  </div>
+</div>
+
 <script>
   const bar = document.getElementById('bar');
   const nav = document.getElementById('navbar');
@@ -466,7 +477,9 @@
   });
   });
 </script>
-
-  <script src="script.js"></script>
+  
+<script src="data.js"></script>
+<script src="Search.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
