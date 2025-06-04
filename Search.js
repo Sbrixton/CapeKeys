@@ -56,8 +56,6 @@ function renderResults(results) {
 }
 
 
-
-
   searchInput.addEventListener('input', () => {
     const query = searchInput.value.toLowerCase().trim();
     const filtered = products.filter(p => p.name.toLowerCase().includes(query));
