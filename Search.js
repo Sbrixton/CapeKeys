@@ -1,97 +1,81 @@
 document.addEventListener('DOMContentLoaded', () => {
   const searchIcon = document.getElementById('searchIcon');
+  const mobileSearchIcon = document.getElementById('mobileSearchIcon');
   const searchOverlay = document.getElementById('searchOverlay');
   const searchInput = document.getElementById('searchInput');
   const searchResults = document.getElementById('searchResults');
 
-  // Toggle overlay
-  searchIcon.addEventListener('click', () => {
+  // Toggle overlay visibility
+  const showOverlay = () => {
     searchOverlay.style.display = 'flex';
     searchInput.focus();
-  });
+  };
 
-  // Close overlay on outside click or Escape
+  const hideOverlay = () => {
+    searchOverlay.style.display = 'none';
+    searchInput.value = '';
+    searchResults.innerHTML = '';
+  };
+
+  if (searchIcon) {
+    searchIcon.addEventListener('click', showOverlay);
+  }
+
+  if (mobileSearchIcon) {
+    mobileSearchIcon.addEventListener('click', showOverlay);
+  }
+
   searchOverlay.addEventListener('click', (e) => {
     if (e.target === searchOverlay) {
-      searchOverlay.style.display = 'none';
-      searchInput.value = '';
-      searchResults.innerHTML = '';
+      hideOverlay();
     }
   });
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      searchOverlay.style.display = 'none';
-      searchInput.value = '';
-      searchResults.innerHTML = '';
+      hideOverlay();
     }
   });
 
+  // Load products from localStorage
   const products = JSON.parse(localStorage.getItem('products')) || [];
 
-function renderResults(results) {
-  if (results.length === 0) {
-    searchResults.innerHTML = '<p>No matching products found.</p>';
-    return;
-  }
+  const renderResults = (results) => {
+    if (results.length === 0) {
+      searchResults.innerHTML = '<p>No matching products found.</p>';
+      return;
+    }
 
-  searchResults.innerHTML = results.map(product => {
-    const imgSrc = product.image.startsWith('/') ? product.image : '/CapeKeys/' + product.image;
-    const pageHref = product.page.startsWith('/') ? product.page : '/CapeKeys/' + product.page;
+    searchResults.innerHTML = results.map(product => {
+      const imgSrc = product.image.startsWith('/') ? product.image : '/CapeKeys/' + product.image;
+      const pageHref = product.page.startsWith('/') ? product.page : '/CapeKeys/' + product.page;
 
-    return `
-      <div class="search-item">
-        <a href="${pageHref}">
-          <img src="${imgSrc}" alt="${product.name}">
-        </a>
-        <div class="search-info">
+      return `
+        <div class="search-item">
           <a href="${pageHref}">
-            <h4>${product.name}</h4>
+            <img src="${imgSrc}" alt="${product.name}">
           </a>
-          <p>R${product.price.toLocaleString()}</p>
+          <div class="search-info">
+            <a href="${pageHref}">
+              <h4>${product.name}</h4>
+            </a>
+            <p>R${product.price.toLocaleString()}</p>
+          </div>
         </div>
-      </div>
-    `;
-  }).join('');
-}
+      `;
+    }).join('');
+  };
 
-
+  // Live search
   searchInput.addEventListener('input', () => {
     const query = searchInput.value.toLowerCase().trim();
-    console.log("🔍 User typed:", query);  // Debug line
-    const filtered = products.filter(p => p.name.toLowerCase().includes(query));
-    console.log("✅ Matching products:", filtered);  // Debug line
+    const filtered = products.filter(product => product.name.toLowerCase().includes(query));
     renderResults(filtered);
   });
 });
 
-// Reuse this from shopDisplay.js
+// Optional cart redirect (if still used)
 function redirectToCart(name, price) {
   const url = `Cart.html?product=${encodeURIComponent(name)}&price=${encodeURIComponent(price)}`;
   window.location.href = url;
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  const desktopSearchIcon = document.getElementById('searchIcon');
-  const mobileSearchIcon = document.getElementById('mobileSearchIcon');
-  const overlay = document.getElementById('searchOverlay');
-
-  const showSearchOverlay = () => {
-    overlay.style.display = 'block';
-    document.getElementById('searchInput').focus();
-  };
-
-  if (desktopSearchIcon) {
-    desktopSearchIcon.addEventListener('click', (e) => {
-      e.preventDefault();
-      showSearchOverlay();
-    });
-  }
-
-  if (mobileSearchIcon) {
-    mobileSearchIcon.addEventListener('click', (e) => {
-      e.preventDefault();
-      showSearchOverlay();
-    });
-  }
-});
