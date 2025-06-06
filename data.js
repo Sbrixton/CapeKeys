@@ -2,7 +2,7 @@ if (!localStorage.getItem('products')) {
   const products = [
       {
         name: "Aston Martin",
-        price: 6400,
+        price: 1,
         image: "/CapeKeys/Aston martin (1).jpeg",
         page: "/CapeKeys/Aston.html"
       },
