@@ -842,65 +842,56 @@ form-details form h2{
 
 /*Cart Page*/
 #cart {
-    overflow-x: auto;
-}
-#cart table{
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-    white-space: nowrap;
+  width: 100%;
 }
 
-#cart table img{
-    width: 100px;
+.cart-table-wrapper {
+  overflow-x: auto;
+  width: 100%;
 }
 
-#cart table td:nth-child(1){
-    width: 100px;
-    text-align: center;
+#cart table {
+  width: 100%;
+  min-width: 600px; /* Important for scroll! */
+  border-collapse: collapse;
+  white-space: nowrap;
 }
 
-#cart table td:nth-child(2){
-    width: 150px;
-    text-align: center;
+#cart table img {
+  width: 100px;
 }
 
-#cart table td:nth-child(3){
-    width: 250px;
-    text-align: center;
+#cart table td {
+  text-align: center;
+  padding: 12px 8px;
 }
 
+#cart table td:nth-child(1) { width: 80px; }
+#cart table td:nth-child(2) { width: 120px; }
+#cart table td:nth-child(3) { width: 200px; }
 #cart table td:nth-child(4),
 #cart table td:nth-child(5),
-#cart table td:nth-child(6){
-    width: 150px;
-    text-align: center;
-}
+#cart table td:nth-child(6) { width: 120px; }
 
 #cart table td:nth-child(5) input {
-    width: 70px;
-    padding: 10px 5px 10px 15px;
+  width: 60px;
+  padding: 8px;
 }
 
-#cart table thead {
-    border: 1px solid #e2e9e1;
-    border-left: none;
-    border-right: none;
+#cart thead {
+  border-top: 1px solid #e2e9e1;
+  border-bottom: 1px solid #e2e9e1;
 }
 
-#cart table thead td{
-    font-weight: 700;
-    text-transform:uppercase;
-    font-size: 13px 0;
-    padding: 18px 0;
+#cart thead td {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 14px 0;
 }
 
-#cart table tbody tr td {
-    padding-top: 15px;
-}
-
-#cart table tbody td{
-    font-size: 13px;
+#cart tbody td {
+  font-size: 14px;
 }
 
 #cart-add {
@@ -1424,7 +1415,14 @@ form-details form h2{
     .section-p1 {
         padding: 20px;
     }
-
+    .cart-table-wrapper {
+        overflow-x: auto;
+    }
+    
+    #cart table {
+        min-width: 700px; /* Forces horizontal scroll */
+    }
+    
     /* Make both pages responsive */
     #cart, #checkout {
         overflow-x: auto;
