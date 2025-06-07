@@ -947,65 +947,54 @@ form-details form h2{
 
 /*Checkout Page*/
 #checkout {
-    overflow-x: auto;
-}
-#checkout table{
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-    white-space: nowrap;
+  width: 100%;
 }
 
-#checkout table img{
-    width: 100px;
+.checkout-table-wrapper {
+  overflow-x: auto;
+  width: 100%;
 }
 
-#checkout table td:nth-child(1){
-    width: 100px;
-    text-align: center;
+#checkout table {
+  width: 100%;
+  min-width: 700px; /* Forces horizontal scroll on small screens */
+  border-collapse: collapse;
+  white-space: nowrap;
 }
 
-#checkout table td:nth-child(2){
-    width: 150px;
-    text-align: center;
+#checkout table img {
+  width: 100px;
 }
 
-#checkout table td:nth-child(3){
-    width: 250px;
-    text-align: center;
+#checkout table td, 
+#checkout table th {
+  text-align: center;
+  padding: 12px 8px;
+  font-size: 14px;
 }
 
+#checkout table td:nth-child(1) { width: 80px; }
+#checkout table td:nth-child(2) { width: 200px; }
+#checkout table td:nth-child(3) { width: 120px; }
 #checkout table td:nth-child(4),
 #checkout table td:nth-child(5),
-#checkout table td:nth-child(6){
-    width: 150px;
-    text-align: center;
-}
+#checkout table td:nth-child(6) { width: 120px; }
 
 #checkout table td:nth-child(5) input {
-    width: 70px;
-    padding: 10px 5px 10px 15px;
+  width: 60px;
+  padding: 8px;
 }
 
 #checkout table thead {
-    border: 1px solid #e2e9e1;
-    border-left: none;
-    border-right: none;
+  border-top: 1px solid #e2e9e1;
+  border-bottom: 1px solid #e2e9e1;
 }
 
-#checkout table thead td{
-    font-weight: 700;
-    text-transform:uppercase;
-    font-size: 13px 0;
-    padding: 18px 0;
-}
-
-#checkout table tbody tr td {
-    padding-top: 15px;
-}
-
-#checkout table tbody td{
-    font-size: 13px;
+#checkout table thead th {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 14px 0;
 }
 
 #supercar-header {
@@ -1421,6 +1410,13 @@ form-details form h2{
     
     #cart table {
         min-width: 700px; /* Forces horizontal scroll */
+    }
+    .checkout-table-wrapper {
+        overflow-x: auto;
+    }
+
+    #checkout table {
+        min-width: 700px;
     }
     
     /* Make both pages responsive */
