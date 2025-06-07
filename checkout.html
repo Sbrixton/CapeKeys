@@ -136,9 +136,10 @@
                 return actions.order.create({
                     purchase_units: [{
                       amount: {
-                        value: totalAmount.toFixed(2),
-                        currency_code: "ZAR"
+                        currency_code: "ZAR",
+                        value: totalAmount.toFixed(2)
                       }
+
                     }]
 
                 });
@@ -153,7 +154,7 @@
         }).render('#paypal-button-container');
     </script>
 
-  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=ZAR"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=ZAR"></script>
 
 <script>
     const modal = document.getElementById("termsModal");
@@ -182,21 +183,31 @@
     // Disable PayPal until checkbox is checked
     const paypalContainer = document.getElementById("paypal-button-container");
   
-    const observer = new MutationObserver(() => {
-      const paypalButton = paypalContainer.querySelector('iframe');
-  
-      if (paypalButton) {
-        paypalButton.style.pointerEvents = checkbox.checked ? 'auto' : 'none';
-        paypalButton.style.opacity = checkbox.checked ? '1' : '0.5';
-  
-        checkbox.addEventListener('change', () => {
-          paypalButton.style.pointerEvents = checkbox.checked ? 'auto' : 'none';
-          paypalButton.style.opacity = checkbox.checked ? '1' : '0.5';
+    checkbox.addEventListener('change', () => {
+  if (checkbox.checked) {
+    paypal.Buttons({
+      createOrder: function(data, actions) {
+        return actions.order.create({
+          purchase_units: [{
+            amount: {
+              currency_code: "ZAR",
+              value: totalAmount.toFixed(2)
+            }
+          }]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(details) {
+          alert('✅ Payment successful! Thank you, ' + details.payer.name.given_name + '.');
+          localStorage.removeItem('cart');
+          window.location.href = 'thankyou.html';
         });
       }
-    });
-  
-    observer.observe(paypalContainer, { childList: true, subtree: true });
+    }).render('#paypal-button-container');
+  } else {
+    paypalContainer.innerHTML = ''; // Remove the button if they uncheck
+  }
+});
 </script>
   
   
